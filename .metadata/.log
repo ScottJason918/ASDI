@@ -415,3 +415,6 @@ org.eclipse.equinox.security.storage.StorageException: No password provided.
 
 !ENTRY org.eclipse.osgi 2 1 2014-08-08 10:05:30.802
 !MESSAGE NLS missing message: LaunchAppToolbarContribution_NoSelectedProjects in: com.appcelerator.titanium.ui.messages
+
+!ENTRY com.appcelerator.titanium.android.core 4 0 2014-08-08 10:33:56.434
+!MESSAGE There are no Android devices connected

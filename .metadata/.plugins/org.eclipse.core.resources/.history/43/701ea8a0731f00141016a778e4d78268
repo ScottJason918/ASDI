@@ -1,0 +1,47 @@
+//requiring file
+var req = require("data");
+//main Window
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor : "#FFF"
+});
+//creating table
+var table = Ti.UI.createTableView({
+});
+//alert from object
+var anAlert = function(){
+	this.info;
+};
+
+//making table view rows from literal notation
+for(var i = 0; i < req.litNot; i++){
+	var aRow = Ti.UI.createTableViewRow({
+		title : req.litNot[i].name,
+		desc : req.litNot[i].type,
+		hasChild: true,
+		hasDetail: true
+	});
+	table.add(aRow);
+	aRow.addEventListener("click", anAlert);
+};
+
+//making table view rows from dot notation
+// for(var i = 0; i < req.dotNot; i++){
+	// var aRow = Ti.UI.createTableViewRow({
+		// title : req.dotNot[i].name,
+		// desc : req.dotNot[i].type,
+		// hasChild: true,
+		// hasDetail: true
+	// });
+	// table.add(aRow);
+	// aRow.addEventListener("click", anAlert);
+// };
+// 
+// ///Testing
+// //console.log(req.dotNot);
+// for(var i = 0; i < req.litNot; i++){
+	// console.log(req.litNot[i].name);
+// };
+
+///Opening Window
+mainWindow.add(table);
+mainWindow.open();

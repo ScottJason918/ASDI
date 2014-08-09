@@ -1,0 +1,40 @@
+var req = require("data");
+
+
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor : "#FFF"
+});
+
+var table = Ti.UI.createTableView({
+});
+
+var anAlert = function(){
+	this.info;
+};
+for(var i = 0; i < req.litNot; i++){
+	var aRow = Ti.UI.createTableViewRow({
+		title : req.litNot[i].name,
+		desc : req.litNot[i].type,
+		hasChild: true,
+		hasDetail: true
+	});
+	table.add(aRow);
+	aRow.addEventListener("click", anAlert);
+};
+
+for(var i = 0; i < req.dotNot; i++){
+	var aRow = Ti.UI.createTableViewRow({
+		title : req.dotNot[i].name,
+		desc : req.dotNot[i].type,
+		hasChild: true,
+		hasDetail: true
+	});
+	table.add(aRow);
+	aRow.addEventListener("click", anAlert);
+};
+console.log(req.wow1);
+console.log(req.notLit);
+console.log(req.dotLit);
+
+mainWindow.add(table);
+mainWindow.open();

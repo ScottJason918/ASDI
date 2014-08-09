@@ -41,7 +41,7 @@ dota.info = function (){
 	alert("These matches can last over an hour.  Hardcore MOBA");
 };
 
-var mine = new Ojbect();
+var mine = new Object();
 mine.name = "Minecraft";
 mine.type = "Sandbox";
 mine.info = function(){
@@ -68,3 +68,12 @@ nos.type = "Third Person Arena";
 nos.info = function(){
 	alert("Humans v. Vampires battle arena. Hard to get used to, but very fun.");
 };
+
+var literal = [league, csGo, tl2, bindIsaac, wildStar];
+var dot = [dota, mine, wow, helloK, nos];
+
+exports.litNot = literal;
+exports.dotNot = dot;
+// console.log(literal);
+// console.log(dot);
+//exports.wow1 = wow;

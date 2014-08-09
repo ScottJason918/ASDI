@@ -1,0 +1,37 @@
+var loadFile = require("data");
+
+
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor : "#FFFFF"
+});
+
+var table = Ti.UI.createTableView({
+});
+
+var anAlert = function(){
+	this.info;
+};
+for(var i = 0; i < loadFile.litNot; i++){
+	var aRow = Ti.UI.createTableViewRow({
+		title : loadFile.litNot[i].name,
+		desc : loadFile.litNot[i].type,
+		hasChild: true,
+		hasDetail: true
+	});
+	table.add(aRow);
+	aRow.addEventListener("click", anAlert);
+};
+
+for(var i = 0; i < loadFile.dotNot; i++){
+	var aRow = Ti.UI.createTableViewRow({
+		title : loadFile.dotNot[i].name,
+		desc : loadFile.dotNot[i].type,
+		hasChild: true,
+		hasDetail: true
+	});
+	table.add(aRow);
+	aRow.addEventListener("click", anAlert);
+};
+
+mainWindow.add(table);
+mainWindow.open();
