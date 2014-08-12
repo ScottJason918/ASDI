@@ -12,10 +12,7 @@ var table = Ti.UI.createTableView({
 	top : 100
 });
 //alert from object
-var anAlert = function(){
-	//console.log(this.name);
-	this.info;
-};
+// var anAlert = this.info();
 
 //making table view rows
 var litSect = Ti.UI.createTableViewSection({
@@ -30,28 +27,23 @@ for(var i = 0; i < data.length; i++){
 	var aRow = Ti.UI.createTableViewRow({
 		title : data[i].name,
 		desc : data[i].type,
+		inf: data[i].info,
 		hasChild: true
 	});
-	var anAlert = function(){
-		//console.log(this.name);
-		this.info;
-	};
+
 	litSect.add(aRow);
-	aRow.addEventListener("click", anAlert);
+	aRow.addEventListener("click", this.inf);
 };
 
 for(var i = 0; i < data.length; i++){
 	var aRow = Ti.UI.createTableViewRow({
 			title : data2[i].name,
 			desc : data2[i].type,
+			inf: data[i].info,
 			hasChild: true,
 		});
-		var anAlert = function(){
-			//console.log(this.name);
-			this.info;
-		};
 		dotSect.add(aRow);
-		aRow.addEventListener("click", anAlert);
+		aRow.addEventListener("click", this.inf);
 };
 // ///Testing
 //console.log(data[2].name);
