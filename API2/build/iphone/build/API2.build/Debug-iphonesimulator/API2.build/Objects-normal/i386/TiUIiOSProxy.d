@@ -1,0 +1,60 @@
+dependencies: \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIiOSProxy.m \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIiOSProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiBase.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiThreading.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiPublicAPI.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiEvaluator.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/KrollContext.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/headers/TiCore/TiCore.h \
+  headers/TiCore/Ti.h headers/TiCore/TiBase.h \
+  headers/TiCore/TiContextRef.h headers/TiCore/TiObjectRef.h \
+  headers/TiCore/TiValueRef.h headers/TiCore/WebKitAvailability.h \
+  headers/TiCore/TiStringRef.h headers/TiCore/TiStringRefCF.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/headers/TiCore/TiContextRefPrivate.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/KrollCallback.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/KrollObject.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiBindingRunLoop.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIiOSAdViewProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIViewProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiViewProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIView.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiAnimation.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiPoint.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiDimension.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiColor.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/ListenerEntry.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiModule.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUtils.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/WebFont.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiFile.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiBuffer.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiBlob.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/LayoutConstraint.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiGradient.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiRect.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiViewTemplate.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/Webcolor.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIiOSTransitionAnimationProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIiOSAttributedStringProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/Ti3DMatrix.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIiOSCoverFlowViewProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIiOSToolbarProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiToolbar.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIiOSTabbedBarProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIiOSDocumentViewerProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiUIiOSNavWindowProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiWindowProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiTab.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiTabGroup.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiViewController.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiControllerProtocols.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiAnimatorProxy.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiSnapBehavior.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiPushBehavior.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiGravityBehavior.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiAnchorAttachBehavior.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiViewAttachBehavior.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiCollisionBehavior.h \
+  /Users/ScoobaSteev/Desktop/VFW/MDV2430/ASDI/API2/build/iphone/Classes/TiDynamicItemBehavior.h
