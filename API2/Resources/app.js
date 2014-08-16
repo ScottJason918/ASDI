@@ -1,23 +1,27 @@
 //making window and Views
 var mainWindow = Ti.UI.createWindow({
-	title : "WoW Challnge Mode!",
-	backgroundColor: "#4C351B"
+	title : "Reddit.com/r/funny",
+	backgroundColor: "#999999"
 });
 
 var titleView = Ti.UI.createView({
 	top: 0,
-	height: "100%",
-	backgroundColor: "#FFB35D"
+	height: 50,
+	backgroundColor: "#666666"
 });
 
 var titleLabel = Ti.UI.createLabel({
-	text: "WoW Data Time!"
+	text: "Funny Pictures!"
 });
-
+var infoView = Ti.UI.createScrollView({
+	top: 51,
+	height : Ti.Platform.displayCaps.platformHeight - titleView,
+	layout: "vertical"
+});
 // Adding views
 titleView.add(titleLabel);
-mainWindow.add(titleView);
+mainWindow.add(titleView, infoView);
 //Getting Data
-var info = require("data");
+var req = require("data");
 //Opening Windows
 mainWindow.open();

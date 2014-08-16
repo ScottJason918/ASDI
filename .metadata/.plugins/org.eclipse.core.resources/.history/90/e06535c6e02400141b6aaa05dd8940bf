@@ -1,0 +1,26 @@
+//making window and Views
+var mainWindow = Ti.UI.createWindow({
+	title : "Reddit.com/r/funny",
+	backgroundColor: "#4C351B"
+});
+
+var titleView = Ti.UI.createView({
+	top: 0,
+	height: 50,
+	backgroundColor: "#FFB35D"
+});
+
+var titleLabel = Ti.UI.createLabel({
+	text: "Funny Pictures!"
+});
+var infoView = Ti.UI.createScrollView({
+	height : Ti.Platform.displayCaps.platformHeight - titleView,
+	layout: vertical
+});
+// Adding views
+titleView.add(titleLabel);
+mainWindow.add(titleView);
+//Getting Data
+var req = require("data");
+//Opening Windows
+mainWindow.open();
