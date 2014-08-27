@@ -1,7 +1,7 @@
 var db = Ti.Database.install("/database/DBase.sqlite", "dTable");
 var win = Ti.UI.currentWindow;
 var data= [];
-var tableView = Ti.UI.createTableView({});
+
 var create = function(){
 	var dBase = Ti.Database.open("Dbase.sqlite");
 	dBase.execute("INSERT INTO dTable (name, nick, number) VALUES (?,?,?)", name, nick, number);
@@ -41,5 +41,5 @@ var del = function(){
 	dBase.close();
 };
 
-exports.read = read;
-exports.data = data;
+// exports.read = read;
+// exports.data = data;

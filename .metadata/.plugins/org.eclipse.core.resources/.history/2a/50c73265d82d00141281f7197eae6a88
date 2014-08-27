@@ -22,7 +22,7 @@ while(rows.isValidRow()){
 		num : number
 	});
 	rows.next();
-}
+};
 rows.close();
 dBase.close();
 console.log(data);
@@ -41,5 +41,5 @@ var del = function(){
 	dBase.close();
 };
 
-exports.read = read;
-exports.data = data;
+// exports.read = read;
+// exports.data = data;
