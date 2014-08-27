@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SQLite/Resources/data.js&apos; to &apos;functions.js&apos;" description="Rename resource &apos;data.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/data.js" name="functions.js" stamp="1408759529280" updateReferences="true"/>&#x0A;<refactoring comment="Move 1 resources to &apos;database&apos;" description="Move 1 resources to &apos;database&apos;" destination="Resources/database" element1="Resources/DBase.sqlite" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1408761002845" updateReferences="true"/>
+</session>

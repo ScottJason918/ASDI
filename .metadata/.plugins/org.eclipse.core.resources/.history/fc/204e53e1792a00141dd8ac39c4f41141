@@ -1,0 +1,8 @@
+//Functions and Table / Rows
+var file = require("data");
+
+var tbl = Ti.UI.createTableView({
+	data
+});
+
+exports.tbl = tbl;

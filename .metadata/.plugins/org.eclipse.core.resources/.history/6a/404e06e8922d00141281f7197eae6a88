@@ -1,0 +1,44 @@
+var db = Ti.Database.install("/database/DBase.sqlite", "dTable");
+
+var data= [];
+
+var create = function(){
+	var dBase = Ti.Database.open("Dbase.sqlite");
+	dBase.execute("INSERT INTO dTable (name, nick, number) VALUES (?,?,?)", name, nick, number);
+	dBase.close();
+};
+
+var read = function() {
+	var dBase = Ti.Database.open("Dbase.sqlite");
+	var rows = dBase.execute("SELECT name, nick, number FROM dTable");
+	while(rows.isValidRow()){
+		var name = dbRows.fieldByName("name");
+		var nick = dbRows.fieldByName("nick");
+		var number = dbRows.fieldByName("number");
+		data.push({
+			title: name,
+			hasChild: true,
+			nick : nick,
+			num : number
+		});
+		rows.next();
+	}
+	rows.close();
+	dBase.close();
+};
+
+var update = function(){
+	var dBase = Ti.Database.open("Dbase.sqlite");
+	dBase.execute("UPDATE dTable SET name=? nick=? number=? WHERE id=?", functions.nameText.value, functions.nickText.value, functions.numberText.value, functions.accept.id);
+	dBase.close();
+};
+
+var del = function(){
+	var dBase = Ti.Database.open("Dbase.sqlite");
+	dBase.execute("DELETE FROM dTable SET name=? nick=? number=? WHERE id=?");
+	dBase.close();
+};
+
+
+exports.read = read;
+exports.data = data;

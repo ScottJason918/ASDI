@@ -1,0 +1,15 @@
+var functions = require("functions");
+var data = require("data");
+
+var main = Ti.UI.createWindow({
+	background: "#ffffff",
+	title: "Phone Book"
+});
+
+var tabG = Ti.UI.createTabGroup();
+
+
+tabG.add(dataTab);
+tabG.add(addTab);
+main.add(tabG);
+main.open();

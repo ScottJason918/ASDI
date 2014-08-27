@@ -1,0 +1,14 @@
+var main = Ti.UI.createWindow ({
+	backgroundColor : "#ffffff"
+});
+
+var nav = Ti.UI.createNavigationWindow({
+	window: main
+});
+var logo = Ti.UI.createImageView({
+	image: "/Pictures/AddLogo.jpg"
+});
+
+
+main.add(logo);
+nav.open();

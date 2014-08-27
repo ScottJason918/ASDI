@@ -1,0 +1,8 @@
+var win = Ti.UI.currentWindow;
+var data1 = require("data");
+var tableView = Ti.UI.createTableView({
+});
+
+tableView.setData(data1.data);
+
+win.add(tableView);

@@ -1,0 +1,29 @@
+////Making Windows and Tables
+
+var data = require("data");
+var functions = require("functions");
+var open = function(){
+	nav.openWindow(win);
+};
+var main = Ti.UI.createWindow ({
+	backgroundColor : "#ffffff"
+});
+
+var nav = Ti.UI.iOS.createNavigationWindow({
+	window: main
+});
+var logo = Ti.UI.createImageView({
+	image: "/Pictures/AddLogo.jpg"
+});
+logo.addEventListener("click", open);
+
+
+var win = Ti.UI.createWindow({
+	backgroundColor: "#ffffff"
+});
+var tbl = Ti.UI.createTableView({
+	data: data.data
+});
+console.log(data.data);
+main.add(logo);
+nav.open();

@@ -1,0 +1,33 @@
+var func = require("functions");
+
+Ti.Database.install("/database/DBase.sqlite", "dTable");
+
+var data = [];
+//Reading DBase
+var get = function(){
+	var db = Ti.Database.open(dTable);
+	var rows = db.execute("SELECT name, nick, number FROM dTable");
+	while (rows.isValidRow()){
+		data.push({
+			name: rows.fieldByName("name"),
+			nick: rows.fieldByName("nick"),
+			number: rows.fieldByName("number")				
+		});
+		rows.next();
+	};
+	rows.close();
+	db.close();
+	app.theTbl(data);
+};
+exports.data = data;
+exports.get = get;
+
+
+//Creating Dbase
+var create = function(name, nick, number){
+	var db = Ti.Database.open(dTable);
+	db.execute("INSERT INTO dTable (name, nick, number) VALUES (?, ?, ?)", name, nick, number);
+	var rows = db.lastInsertRowId;
+	db.close();
+	data = [];
+};

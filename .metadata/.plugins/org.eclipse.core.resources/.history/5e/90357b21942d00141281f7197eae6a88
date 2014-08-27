@@ -1,0 +1,14 @@
+var mainWin = Ti.UI.createWindow({
+	backgroundColor: "#FFFFFF",
+	title: "Phone Book"
+});
+var win = Ti.UI.currentWindow;
+var data1 = require("data");
+var tableView = Ti.UI.createTableView({
+});
+
+tableView.setData(data1.data);
+
+
+mainWin.add(tableView);
+data1.read();

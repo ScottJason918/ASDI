@@ -1,0 +1,23 @@
+{
+	"target": "simulator",
+	"deployType": "development",
+	"deviceFamily": "universal",
+	"iosSdkPath": "/Users/ScoobaSteev/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.GA/iphone",
+	"tiCoreHash": "77157e1ffaec640cf559356a147b6a4c",
+	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"modulesNativeHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"gitHash": "787cd39",
+	"name": "SQLite",
+	"id": "com.scottjason.sqlite",
+	"analytics": true,
+	"publisher": "ScoobaSteev",
+	"url": "http://",
+	"version": "1.0",
+	"description": "undefined",
+	"copyright": "2014 by ScoobaSteev",
+	"guid": "87124952-3bd9-4d11-8b10-58bebc09c70d",
+	"skipJSMinification": true,
+	"forceCopy": false,
+	"forceCopyAll": false,
+	"encryptJS": false
+}

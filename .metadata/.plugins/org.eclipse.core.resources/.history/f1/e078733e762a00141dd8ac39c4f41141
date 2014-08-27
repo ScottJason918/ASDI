@@ -1,0 +1,5 @@
+//Functions and Table / Rows
+
+var tbl = Ti.UI.createTableView({
+	data: data.data
+});

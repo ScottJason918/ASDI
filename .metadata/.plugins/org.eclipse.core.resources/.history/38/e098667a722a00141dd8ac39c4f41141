@@ -1,0 +1,22 @@
+var data = require("data");
+var functions = require("functions");
+var open = function(){
+	var win = Ti.UI.createWindow({
+		backgroundColor: "#ffffff"
+	});
+	win.open();
+};
+var main = Ti.UI.createWindow ({
+	backgroundColor : "#ffffff"
+});
+
+var nav = Ti.UI.iOS.createNavigationWindow({
+	window: main
+});
+var logo = Ti.UI.createImageView({
+	image: "/Pictures/AddLogo.jpg"
+});
+logo.addEventListener("click", open);
+
+main.add(logo);
+nav.open();

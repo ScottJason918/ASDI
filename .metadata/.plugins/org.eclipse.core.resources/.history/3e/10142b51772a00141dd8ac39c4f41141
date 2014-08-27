@@ -1,0 +1,6 @@
+//Functions and Table / Rows
+var data = require("data");
+
+var tbl = Ti.UI.createTableView({
+	data: data.data
+});

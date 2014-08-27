@@ -24,6 +24,7 @@ var yes = function (){
 		var thumb = infoCon[i].data.url;
 		var lastFour = thumb.substring((thumb.length - 3), thumb.length);
 		var title = infoCon[i].data.title;
+		///keeping the non image files out
 		if(lastFour === "jpg" || lastFour === "gif" || lastFour === "png"){
 			var listView = Ti.UI.createView({
 				backgroundColor: "#336699",

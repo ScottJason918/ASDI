@@ -1,0 +1,23 @@
+{
+	"target": "simulator",
+	"deployType": "development",
+	"deviceFamily": "iphone",
+	"iosSdkPath": "/Users/ScoobaSteev/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.GA/iphone",
+	"tiCoreHash": "77157e1ffaec640cf559356a147b6a4c",
+	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"modulesNativeHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"gitHash": "787cd39",
+	"name": "Wielgosz_Michael_Project3_LocalStorage",
+	"id": "wielgosz.michael.project3.localStorage",
+	"analytics": true,
+	"publisher": "Michael Wielgosz",
+	"url": "http://",
+	"version": "1.0",
+	"description": "Project 3: Local Storage with SQLite\nASD 1408\nMichael Wielgosz",
+	"copyright": "2014 by Michael Wielgosz",
+	"guid": "63314fce-9a1e-488e-862b-24ae576958db",
+	"skipJSMinification": true,
+	"forceCopy": false,
+	"forceCopyAll": false,
+	"encryptJS": false
+}
