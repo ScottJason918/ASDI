@@ -23,3 +23,27 @@
 // }) ;
 // 
 // 
+// //Creating Windows and Tabs
+// var addTab = Ti.UI.createTab({
+	// title: "Add Contact",
+	// window: addWindow
+// });
+// 
+// var dataTab = Ti.UI.createTab({
+	// title: "List",
+	// window: dataWindow
+// });
+// 
+// var addWindow = Ti.UI.createWindow({
+	// title: "Add Contact"
+// });
+// 
+// var dataWindow = Ti.UI.createWindow({
+	// title: "List"
+// });
+// 
+// var dataTable = function() {
+	// Ti.UI.createTableView({
+	// });
+	// for(var i = 0; )
+// };

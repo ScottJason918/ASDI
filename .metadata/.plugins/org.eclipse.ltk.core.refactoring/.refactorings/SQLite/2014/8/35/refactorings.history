@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SQLite/Resources/database/DBase.sqlite&apos; to &apos;DBase.db&apos;" description="Rename resource &apos;DBase.sqlite&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/database/DBase.sqlite" name="DBase.db" stamp="1409197532878" updateReferences="true"/>
+</session>

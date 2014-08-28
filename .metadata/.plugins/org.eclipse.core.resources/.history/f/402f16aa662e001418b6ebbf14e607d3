@@ -1,15 +1,15 @@
-var db = Ti.Database.install("/database/DBase.db", "db1");
+var db = Ti.Database.install("/database/DBase.db", "DBase.db");
 var data= [];
 var tableView = Ti.UI.createTableView({editable: true});
 var create = function(){
-	var db = Ti.Database.open("db1");
-	db.execute("INSERT INTO db1 (name, nick, number) VALUES (?,?,?)", name, nick, number);
+	var db = Ti.Database.open("DBase.db");
+	db.execute("INSERT INTO dTable (name, nick, number) VALUES (?,?,?)", name, nick, number);
 	db.close();
 };
 
 var read = function() {
-	var db = Ti.Database.open("db1");
-	var rows = db.execute("SELECT * FROM db1");
+	var db = Ti.Database.open("DBase.db");
+	var rows = db.execute("SELECT * FROM DBase");
 	while(rows.isValidRow()){
 		var name = rows.fieldByName("name");
 		var nick = rows.fieldByName("nick");
@@ -53,13 +53,13 @@ var read = function() {
 };
 
 var update = function(){
-	var dBase = Ti.Database.open("db1");
+	var dBase = Ti.Database.open("Dbase.sqlite");
 	dBase.execute("UPDATE dTable SET name=? nick=? number=? WHERE id=?", functions.nameText.value, functions.nickText.value, functions.numberText.value, functions.accept.id);
 	dBase.close();
 };
 
 var del = function(){
-	var dBase = Ti.Database.open("db1");
+	var dBase = Ti.Database.open("Dbase.sqlite");
 	dBase.execute("DELETE FROM dTable SET name=? nick=? number=? WHERE id=?");
 	dBase.close();
 };
