@@ -1,0 +1,7 @@
+var data1 = require("data");
+var functions = require("functions");
+
+//data1.create();
+data1.read();
+
+

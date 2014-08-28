@@ -1,0 +1,25 @@
+// var nickText = Ti.UI.createTextField({
+	// borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	// top: 50,
+	// right: 10,
+	// width: "80%",
+	// height: 60
+// }) ;
+// 
+// var nameText = Ti.UI.createTextField({
+	// borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	// top: 120,
+	// right: 10,
+	// width: "80%",
+	// height: 60
+// }) ;
+// 
+// var numberText = Ti.UI.createTextField({
+	// borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	// top: 180,
+	// right: 10,
+	// width: "80%",
+	// height: 60
+// }) ;
+// 
+// 
