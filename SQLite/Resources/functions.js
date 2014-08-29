@@ -1,42 +1,23 @@
 var data1 = require("data");
-var app1 = require("app.js");
 
-var setUp = function(){	
-	var win2 = Titanium.UI.createWindow({  
-	    title:'Add',
-	    backgroundColor:'#fff'
-	});
-	var tab2 = Titanium.UI.createTab({  
-	    icon:'KS_nav_ui.png',
-	    title:'Add',
-	    window:win2
-	});
-	var nickText = Ti.UI.createTextField({
-		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-		top: 50,
-		right: 10,
-		width: "80%",
-		height: 60
-	}) ;
-	
-	var nameText = Ti.UI.createTextField({
-		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-		top: 120,
-		right: 10,
-		width: "80%",
-		height: 60
-	}) ;
-	
-	var numberText = Ti.UI.createTextField({
-		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-		top: 180,
-		right: 10,
-		width: "80%",
-		height: 60
-	}) ;
-	win2.add(numberText, nameText, nickText);
-	data1.tabgroup.addTab(tab2);	
+var create = function(){
+	var db = Ti.Database.open("Dbase.db");
+	db.execute("CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY, name TEXT, nick TEXT, number INTEGER)");
+	//db.execute("INSERT INTO test (name, nick, number) VALUES (?,?,?)", name, nick, number);
+	db.close();
+};
 
-};	
-exports.setUp = setUp;
+// var update = function(){
+	// var db = Ti.Database.open("Dbase.db");
+	// db.execute("")
+// };
 
+var del = function(){
+	var dBase = Ti.Database.open("DBase.db");
+	dBase.execute("DELETE FROM dTable SET name=? nick=? number=? WHERE id=?");
+	dBase.close();
+};
+
+exports.create = create;
+exports.del = del;
+//exports.update = update;

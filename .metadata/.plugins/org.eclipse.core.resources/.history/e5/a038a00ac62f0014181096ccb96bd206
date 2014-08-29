@@ -1,0 +1,66 @@
+var data1 = require("data");
+
+var setUp = function(){	
+	var win1 = Titanium.UI.createWindow({  
+	    title:'Add',
+	    backgroundColor:'#fff'
+	});
+	var tab1 = Titanium.UI.createTab({  
+	    icon:'KS_nav_ui.png',
+	    title:'Add',
+	    window:win1
+	});
+	var nickText = Ti.UI.createTextField({
+		hintText: "Enter Nick Name Here",
+		paddingLeft: 10,
+		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: 120,
+		width: "80%",
+		height: 60,
+		borderColor: "#C0C0C0"
+	}) ;
+	
+	var nameText = Ti.UI.createTextField({
+		hintText: "Enter Name Here",
+		paddingLeft: 10,
+		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: 50,
+		width: "80%",
+		height: 60,
+		borderColor: "#C0C0C0"
+	}) ;
+	
+	var numberText = Ti.UI.createTextField({
+		hintText: "Enter Phone Number Here",
+		paddingLeft: 10, 
+		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: 190,
+		width: "80%",
+		height: 60,
+		borderColor: "#C0C0C0"
+	}) ;
+	var button = Ti.UI.createLabel({
+		text: "Accept"
+	});
+
+	var butView = Ti.UI.createView({
+		bottom: 25,
+		borderColor: "#C0C0C0",
+		height: 60,
+		width: "40%",
+		left: 25
+	});
+	butView.addEventListener("click", function(){
+		var update = function(){
+			var dBase = Ti.Database.open("DBase.db");
+			dBase.execute("UPDATE test SET name=? nick=? number=? WHERE id=?", nameText.value, nickText.value, numberText.value);
+			dBase.close();
+		};
+	});
+	butView.add(button);
+	win1.add(numberText, nameText, nickText, butView);
+	tabGroup.addTab(tab1);	
+};
+
+exports.setUp = setUp;
+

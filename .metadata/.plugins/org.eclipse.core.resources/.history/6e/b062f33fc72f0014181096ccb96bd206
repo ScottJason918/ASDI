@@ -1,0 +1,9 @@
+var data1 = require("data");
+var functions = require("functions");
+
+var tabGroup = Ti.UI.createTabGroup();
+
+
+data1.read();
+functions.setUp();
+

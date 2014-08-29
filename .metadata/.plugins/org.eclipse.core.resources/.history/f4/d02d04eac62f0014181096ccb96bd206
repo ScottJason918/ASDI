@@ -1,0 +1,54 @@
+var data1 = require("data");
+
+var setUp = function(){	
+	var win2 = Titanium.UI.createWindow({  
+	    title:'Add',
+	    backgroundColor:'#fff'
+	});
+	var tab2 = Titanium.UI.createTab({  
+	    icon:'KS_nav_ui.png',
+	    title:'Add',
+	    window:win2
+	});
+		
+	var nameText = Ti.UI.createTextField({
+		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: 50,
+		hintText: "Enter Name Here",
+		paddingLeft: 10,
+		width: "80%",
+		height: 60,
+		borderColor: "#C0C0C0"
+	}) ;
+	var nickText = Ti.UI.createTextField({
+		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: 120,
+		hintText: "Enter Nick Name Here",
+		paddingLeft: 10,
+		width: "80%",
+		height: 60,
+		borderColor: "#C0C0C0"
+	}) ;
+
+	var numberText = Ti.UI.createTextField({
+		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: 190,
+		hintText: "Enter Number Here",
+		paddingLeft: 10,
+		width: "80%",
+		height: 60,
+		borderColor: "#C0C0C0"
+	}) ;
+	var button = Ti.UI.createButton({
+		text: "Accept",
+		height: 50,
+		width: "80%",
+		bottom: 50
+	});
+	
+	win2.add(numberText, nameText, nickText, button);
+	tabGroup.addTab(tab2);	
+
+};	
+exports.setUp = setUp;
+

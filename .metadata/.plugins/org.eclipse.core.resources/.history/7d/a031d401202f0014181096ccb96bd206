@@ -1,0 +1,127 @@
+
+var data= [];
+var tabGroup = Ti.UI.createTabGroup();
+var tableView = Ti.UI.createTableView({});
+var create = function(){
+	var db = Ti.Database.open("Dbase.db");
+	db.execute("INSERT INTO dTable (name, nick, number) VALUES (?,?,?)", name, nick, number);
+	db.close();
+};
+
+var read = function() {
+ 	var win1 = Titanium.UI.createWindow({  
+	    title:'Contacts',
+	    backgroundColor:'#fff',
+	});
+	var tab1 = Titanium.UI.createTab({  
+    	icon:'KS_nav_views.png',
+    	title:'Contacts',
+	    window:win1
+ 	});
+
+	// var win2 = Titanium.UI.createWindow({  
+	    // title:'Add',
+	    // backgroundColor:'#fff'
+	// });
+	// var tab2 = Titanium.UI.createTab({  
+	    // icon:'KS_nav_ui.png',
+	    // title:'Add',
+	    // window:win2
+	// });
+
+	var db = Ti.Database.open("dTable");
+	var rows = db.execute("SELECT name, nick, number FROM dTable");
+	while(rows.isValidRow()){
+		var name = rows.fieldByName("name");
+		var nick = rows.fieldByName("nick");
+		var number = rows.fieldByName("number");
+		data.push({
+			title: name,
+			hasChild: true,
+			nick : nick,
+			num : number
+		});
+		rows.next();
+	}
+	console.log(db);
+	rows.close(); 
+	db.close();
+	tabGroup.addTab(tab1);
+	// tabGroup.addTab(tab2);
+	win1.add(tableView);
+	tabGroup.open();
+};
+
+var update = function(){
+	var dBase = Ti.Database.open("Dbase.sqlite");
+	dBase.execute("UPDATE dTable SET name=? nick=? number=? WHERE id=?", functions.nameText.value, functions.nickText.value, functions.numberText.value, functions.accept.id);
+	dBase.close();
+};
+
+var del = function(){
+	var dBase = Ti.Database.open("Dbase.sqlite");
+	dBase.execute("DELETE FROM dTable SET name=? nick=? number=? WHERE id=?");
+	dBase.close();
+};
+
+var setUp = function(){	
+	var win2 = Titanium.UI.createWindow({  
+	    title:'Add',
+	    backgroundColor:'#fff'
+	});
+	var tab2 = Titanium.UI.createTab({  
+	    icon:'KS_nav_ui.png',
+	    title:'Add',
+	    window:win2
+	});
+	var nickText = Ti.UI.createTextField({
+		hintText: "Enter Nick Name Here",
+		paddingLeft: 10,
+		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: 120,
+		width: "80%",
+		height: 60,
+		borderColor: "#C0C0C0"
+	}) ;
+	
+	var nameText = Ti.UI.createTextField({
+		hintText: "Enter Name Here",
+		paddingLeft: 10,
+		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: 50,
+		width: "80%",
+		height: 60,
+		borderColor: "#C0C0C0"
+	}) ;
+	
+	var numberText = Ti.UI.createTextField({
+		hintText: "Enter Phone Number Here",
+		paddingLeft: 10, 
+		borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: 190,
+		width: "80%",
+		height: 60,
+		borderColor: "#C0C0C0"
+	}) ;
+	win2.add(numberText, nameText, nickText);
+	tabGroup.addTab(tab2);	
+};
+
+var button = Ti.UI.createButton({
+	text: "Accept"
+});
+
+var butView = Ti.UI.createView({
+	bottom: 25,
+	height: 60,
+	width: "40%"
+});
+
+wind2.add(butView);
+butView.add(button);
+exports.setUp = setUp;
+exports.tabGroup = tabGroup;
+exports.create = create;
+exports.read = read;
+exports.data = data;
+

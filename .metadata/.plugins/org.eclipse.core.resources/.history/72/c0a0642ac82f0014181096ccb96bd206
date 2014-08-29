@@ -1,0 +1,11 @@
+var data1 = require("data");
+
+
+
+
+var del = function(){
+	var dBase = Ti.Database.open("DBase.db");
+	dBase.execute("DELETE FROM dTable SET name=? nick=? number=? WHERE id=?");
+	dBase.close();
+};
+

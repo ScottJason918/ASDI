@@ -1,0 +1,119 @@
+var db = Ti.Database.install("/database/DBase.db", "dTable");
+var data= [];
+var tabGroup = Ti.UI.createTabGroup();
+var tableView = Ti.UI.createTableView({});
+var create = function(){
+	var db = Ti.Database.open("Dbase.db");
+	db.execute("CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY, name TEXT, nick TEXT, number INTEGER)");
+	db.execute("INSERT INTO test (name, nick, number) VALUES (?,?,?)", name, nick, number);
+	db.close();
+};
+
+var read = function() {
+ 	var win2 = Titanium.UI.createWindow({  
+	    title:'Contacts',
+	    backgroundColor:'#fff',
+	});
+	var tab2 = Titanium.UI.createTab({  
+    	icon:'KS_nav_views.png',
+    	title:'Contacts',
+	    window:win2
+ 	});
+
+	var db = Ti.Database.open("dTable");
+	var rows = db.execute("SELECT name, nick, number FROM dTable");
+	while(rows.isValidRow()){
+		var name = rows.fieldByName("name");
+		var nick = rows.fieldByName("nick");
+		var number = rows.fieldByName("number");
+		data.push({
+			title: name,
+			hasChild: true,
+			nick : nick,
+			num : number
+		});
+		rows.next();
+	}
+	console.log(db);
+	rows.close(); 
+	db.close();
+	tabGroup.addTab(tab2);
+	win2.add(tableView);
+	tabGroup.open();
+};
+
+var del = function(){
+	var dBase = Ti.Database.open("DBase.db");
+	dBase.execute("DELETE FROM dTable SET name=? nick=? number=? WHERE id=?");
+	dBase.close();
+};
+
+// var setUp = function(){	
+	// var win1 = Titanium.UI.createWindow({  
+	    // title:'Add',
+	    // backgroundColor:'#fff'
+	// });
+	// var tab1 = Titanium.UI.createTab({  
+	    // icon:'KS_nav_ui.png',
+	    // title:'Add',
+	    // window:win1
+	// });
+	// var nickText = Ti.UI.createTextField({
+		// hintText: "Enter Nick Name Here",
+		// paddingLeft: 10,
+		// borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		// top: 120,
+		// width: "80%",
+		// height: 60,
+		// borderColor: "#C0C0C0"
+	// }) ;
+// 	
+	// var nameText = Ti.UI.createTextField({
+		// hintText: "Enter Name Here",
+		// paddingLeft: 10,
+		// borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		// top: 50,
+		// width: "80%",
+		// height: 60,
+		// borderColor: "#C0C0C0"
+	// }) ;
+// 	
+	// var numberText = Ti.UI.createTextField({
+		// hintText: "Enter Phone Number Here",
+		// paddingLeft: 10, 
+		// borderstyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		// top: 190,
+		// width: "80%",
+		// height: 60,
+		// borderColor: "#C0C0C0"
+	// }) ;
+	// var button = Ti.UI.createLabel({
+		// text: "Accept"
+	// });
+// 
+	// var butView = Ti.UI.createView({
+		// bottom: 25,
+		// borderColor: "#C0C0C0",
+		// height: 60,
+		// width: "40%",
+		// left: 25
+	// });
+	// // buttonview.addEventListener("click", function(){
+		// // var update = function(){
+			// // var dBase = Ti.Database.open("DBase.db");
+			// // dBase.execute("UPDATE test SET name=? nick=? number=? WHERE id=?", nameText.value, nickText.value, numberText.value);
+			// // dBase.close();
+		// // };
+	// // });
+	// butView.add(button);
+	// win2.add(numberText, nameText, nickText, butView);
+	// tabGroup.addTab(tab2);	
+// };
+
+
+
+exports.tabGroup = tabGroup;
+exports.create = create;
+exports.read = read;
+exports.data = data;
+
