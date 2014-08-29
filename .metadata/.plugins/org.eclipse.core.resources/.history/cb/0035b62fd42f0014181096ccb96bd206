@@ -27,21 +27,22 @@ var read = function() {
 		});
 		rows.next();
 	}
+	for(i=0; i>data.length; i++){
+		var rowz = Ti.UI.createTableViewRow({
+			title: data[i].title,
+			number: data[i].number,
+			nick: data[i].nick
+		});
+		tblSection.add(rowz);
+		tblSection.add(sections);
+	};
+
 	console.log(data[0].title);
 	rows.close(); 
 	db.close();
 	tabGroup.addTab(tab2);
 	win2.add(tableView);
 	tabGroup.open();
-};
-
-for(i=0; i>data.length; i++){
-	var rowz = Ti.UI.createTableViewRow({
-		title: data[i].title,
-		number: data[i].number,
-		nick: data[i].nick
-	});
-	tblSection.add(rowz);
 };
 
 var setUp = function(){	

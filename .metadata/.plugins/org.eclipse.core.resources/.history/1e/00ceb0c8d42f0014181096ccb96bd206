@@ -14,4 +14,4 @@ functions.create();
 data1.read();
 data1.setUp();
 tableView.setData(sections);
-
+console.log(tblSection);

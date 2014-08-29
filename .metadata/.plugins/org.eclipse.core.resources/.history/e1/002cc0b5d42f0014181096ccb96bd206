@@ -13,5 +13,5 @@ var rowz = Ti.UI.createTableViewSection({});
 functions.create();
 data1.read();
 data1.setUp();
-tableView.setData(sections);
-
+tableView.add(sections);
+console.log(tblSection);
