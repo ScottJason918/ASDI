@@ -1,0 +1,15 @@
+var data1 = require("data");
+var functions = require("functions");
+
+var tabGroup = Ti.UI.createTabGroup();
+var tableView = Ti.UI.createTableView({
+	height: "auto"
+});
+
+var rowz = Ti.UI.createTableViewSection({});
+
+
+functions.create();
+data1.read();
+data1.setUp();
+console.log(tblSection);
