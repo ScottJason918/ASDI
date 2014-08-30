@@ -27,21 +27,24 @@ var read = function() {
 		});
 		rows.next();
 	}
-	console.log(data[0].title);
+
+	for(i=0; i < data.length; i++){
+		var rowz = Ti.UI.createTableViewRow({
+			title: data[i].title,
+			number: data[i].number,
+			nick: data[i].nick,
+			hasChild: true
+		});
+		tblSection.add(rowz);
+		tblSection.addEventListener("click", this.number);
+	};
+
+	// console.log(data[0].title);
 	rows.close(); 
 	db.close();
 	tabGroup.addTab(tab2);
 	win2.add(tableView);
 	tabGroup.open();
-};
-
-for(i=0; i>data.length; i++){
-	var rowz = Ti.UI.createTableViewRow({
-		title: data[i].title,
-		number: data[i].number,
-		nick: data[i].nick
-	});
-	tblSection.add(rowz);
 };
 
 var setUp = function(){	
@@ -95,6 +98,8 @@ var setUp = function(){
 	tabGroup.addTab(tab2);	
 
 };	
+
+
 
 exports.setUp = setUp;
 // exports.create = create;
